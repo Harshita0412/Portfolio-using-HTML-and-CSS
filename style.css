@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #f0f8ff, #e6e6fa);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    color: #5a5aad;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(90, 90, 173, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#bio, #skills, #college, #contact {
+    background: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#bio:hover, #skills:hover, #college:hover, #contact:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: #dcdcff;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background: #b6b6ff;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #5a5aad;
+}
+
+button {
+    background: #5a5aad;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Smooth Hover Animations */
+@keyframes hover-effect {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+nav a:hover, .skill-item:hover {
+    animation: hover-effect 0.5s ease-in-out;
+}
